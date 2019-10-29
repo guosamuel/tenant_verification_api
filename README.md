@@ -2,9 +2,9 @@
 
 ## Description
 
-Many people are not aware of situations where they could make a difference. This might be because they do not have social media accounts or the time to keep on top of current events. *In The Know* makes it easy for users to not only be aware of important events, but to also become part of the change the world needs.
+Landlords have experienced bad renting experiences, whether a tenant failed to observe building rules or someonoe failed to pay rent and refused to leave the property. Landlords may worry about their next tenant and do not have the resources to make informed choices about their next tenant. *Tenant Verification* makes it easy for landlords, in addition to background checks, also see history on a tenant before allowing them to move in and avoid future confrontations or legal involvement.
 
-It is an interactive application that allows users to get the word out of important causes, catastrophes, or achievements. It allows users to contribute.
+It is an interactive application that allows users to inform landlords about their past renting experiences. It allows users to contribute.
 
 The **front-end** complement of this repo lives [here](https://github.com/Flatiron-group/tenant_verification_api.git).
 
