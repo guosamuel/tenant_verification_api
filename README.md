@@ -109,4 +109,4 @@ You may report bugs & issues on [GitHub](https://github.com/Flatiron-group/tenan
 Everyone interacting in BeInTheKnow's codebases, issue trackers, chat rooms, and mailing lists is expected to follow the [code of conduct](https://github.com/Flatiron-group/tenant_verification_api/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
-Not yet open source.
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
