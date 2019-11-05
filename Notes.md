@@ -1,12 +1,12 @@
-Goal: Let landlords create reviews for their tenants and be able to track how good/bad these tenants are so other landlords can decide whether or not to lease the places to them
+Goal: Let landlords create reviews for their tenants and be able to track how good/bad these tenants are so other landlords can decide whether or not to lease their places
 
 Landlords
     -The primary user model
-    -2 separate show pages ( 1 for the profile page, 1 for the list of tenants)
+    -2 separate show pages ( 1 for the profile page, 1 for the tenants)
     -Edit their profile info
     -Sign up page, login page
     -The site will have a Navbar (top or side) allowing the landlord to navigate to the home page and the profile
-    -Landlord show page- root route (home page?) which includes a Tenants list show page. It shows the list of tenants that have been in contact with landlord
+    -Landlord index page (home page?) which includes the list of tenants. It shows the list of tenants that have been in contact with landlord
     -Landlords can update their tenants list, put the reviews on the tenants
     -After selecting one of the tenants, add a review (only if the tenant has rented from the landlord) and be able to edit it too
     -Editing a tenant's review will be a route ( /tenant/id/edit)
