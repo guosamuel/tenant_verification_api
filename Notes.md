@@ -1,3 +1,4 @@
+11/5/19
 Goal: Let landlords create reviews for their tenants and be able to track how good/bad these tenants are so other landlords can decide whether or not to lease their places
 
 Landlords
@@ -18,3 +19,47 @@ Tenants
     -Sign up, login page
     -Attributes: username, password_digest, email, name
     -Be able to leave a review for the landlord they've rented from
+----------------------------------------------
+11/8/19
+Group meeting:
+
+Goal: Focus will be on Landords posting profiles and reviews for their prior tennants for other landlords to see and also review on.
+
+Discussed migration tables and attribues
+    -Final decision will be 4 tables: Lanlord, Review(join table), Tenant, and Address.
+    -Attributes will be as follows:
+
+    Landlord
+        -username
+        -email
+        -name
+        -password digest
+    Review
+        -tenant_id
+        -landlord_id
+        -comments
+        -address
+        -start_date
+        -end_date
+    Tenants
+        -name
+    Address
+        -address1
+        -address2
+        -city
+        -state
+        -zipcode
+
+Relationships
+    Address  =belongs_to=>  Landlord  =has_many=>  Reviews  <=has_many=  Tenants
+
+Next steps:
+    Create migration tables
+    Create models and relationships
+
+
+
+
+Potential future add-ons:
+    - Tenants will have a login
+    -country attributes to address
