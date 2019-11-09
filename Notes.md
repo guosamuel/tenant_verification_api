@@ -32,7 +32,8 @@ Discussed migration tables and attribues
     Landlord
         -username
         -email
-        -name
+        -first_name
+        -last_name
         -password digest
     Review
         -tenant_id
@@ -44,8 +45,9 @@ Discussed migration tables and attribues
     Tenants
         -name
     Address
-        -address1
-        -address2
+        -landlord_id
+        -address_line_1
+        -address_line_2
         -city
         -state
         -zipcode
