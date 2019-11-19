@@ -1,4 +1,4 @@
 class Address < ApplicationRecord
-    belongs_to :user 
+    belongs_to :landlord 
     belongs_to :tenant   
 end
