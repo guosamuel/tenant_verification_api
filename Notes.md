@@ -71,7 +71,7 @@ Discussed validates and routes:
 
   Validations:
   
-    Landlord validates :first_name, presence: true, :last_name, presence: true, :email, format: { with: URI::MailTo::EMAIL_REGEXP },    :password, presence: true
+    Landlord validates :first_name, presence: true, :last_name, presence: true, :email, format: { with: URI::MailTo::EMAIL_REGEXP },:password, presence: true
     Addresses validates :street 1, presence: true, :city, presence: true, :state,presence: true, :postal, length: { in:5...9 } 
     Reviews validates :start_date, presence: true, :end_date, presence: true,:address, presence: true,:comment, presence: true
     Tenants validates :first_name, presence: true, :last_name, presence: true  
