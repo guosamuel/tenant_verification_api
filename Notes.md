@@ -59,9 +59,29 @@ Next steps:
     Create migration tables
     Create models and relationships
 
-
-
-
 Potential future add-ons:
     - Tenants will have a login
     -country attributes to address
+----------------------------------------------
+11/22/19
+Group meeting:
+
+Goal:Focus will be to start on validations for model classes, and API routes for backend.
+Discussed validates and routes:
+  Validations:
+    Landlord validates :first_name, presence: true, :last_name, presence: true, :email, format: { with: URI::MailTo::EMAIL_REGEXP }, :password, presence: true
+    Addresses validates :street 1, presence: true, :city, presence: true, :state,presence: true, :postal, length: { in:5...9 } 
+    Reviews validates :start_date, presence: true, :end_date, presence: true,:address, presence: true,:comment, presence: true
+    Tenants validates :first_name, presence: true, :last_name, presence: true  
+    
+ Going to wait on writing method, until we need them. For example: Scope or Omniauth function
+ 
+  Routes:
+     Landlords: new action is signup, REST(GET, PUT, POST and DELETE)or show,create,update,and delete.
+               Sessions controller will add log in and log out. 
+     Addresses: all RESTful routes, but five routes are under landlords.
+     Reviews: REST(GET, PUT, POST and DELETE) routes, but new and edit route will be nested under tenants. 
+     Tenants: REST(GET, PUT, POST and DELETE) routes but one index is nested under landlords, and one index is not nested under landlords. 
+     
+ Next step:
+  Add controllers
