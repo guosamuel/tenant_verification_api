@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   resources :landlords do
     resources :addresses
  end 
-
-	resources :landlords do
+  
+  resources :landlords do
     resources :tenents  
  end 
 
