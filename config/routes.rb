@@ -10,10 +10,10 @@ Rails.application.routes.draw do
  end 
   
   resources :landlords do
-    resources :tenents  
+    resources :tenants  
  end 
 
-  resources :tenents do
+  resources :tenants do
     resources :reviews
  end 
 end 
