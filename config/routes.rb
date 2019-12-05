@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 	resources :landlords do
     resources :tenents  
  end 
+ 
   resources :tenents do
     resources :reviews
  end 
