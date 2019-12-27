@@ -7,15 +7,13 @@ Rails.application.routes.draw do
 
   resources :landlords do
     resources :addresses
- end 
-  
+ end
+
   resources :landlords do
-    resources :tenants  
- end 
+    resources :tenants
+ end
 
   resources :tenants do
     resources :reviews
- end 
-end 
-
-
+ end
+end
