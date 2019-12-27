@@ -31,7 +31,9 @@ class LandlordsController < ApplicationController
     end
   end
 
-  def delete
-
+  def destroy
+    id = params[:id]
+    Landlord.destroy(id)
+    render json: {message: "Successfully deleted"}
   end
 end
