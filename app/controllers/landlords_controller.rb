@@ -1,7 +1,8 @@
 class LandlordsController < ApplicationController
-  def index
-    landlords = Landlords.all
-    render json: landlords
+  def show
+    id = params[:id]
+    landlord = Landlord.find(id)
+    render json: landlord
   end
 
   def create
