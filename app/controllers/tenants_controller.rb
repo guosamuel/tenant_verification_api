@@ -1,4 +1,9 @@
 class TenantsController < ApplicationController
+  def index
+    tenants = Tenant.all
+    render json: tenants
+  end
+  
   def show
     id = params[:id]
     tenant = Tenant.find(id)
