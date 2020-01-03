@@ -3,11 +3,18 @@ class TenantsController < ApplicationController
     tenants = Tenant.all
     render json: tenants
   end
-  
+
   def show
-    id = params[:id]
-    tenant = Tenant.find(id)
-    render json: tenant
+    if !params[:landlord_id]
+      id = params[:id]
+      tenant = Tenant.find(id)
+      render json: tenant
+    else
+      id = params[:id]
+      landlord_id = params[:landlord_id]
+      tenant = Landlord.find(landlord_id).tenants.find(id)
+      render json: tenant
+    end
   end
 
   def create
