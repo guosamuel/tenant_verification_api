@@ -20,11 +20,11 @@ class TenantsController < ApplicationController
 
   def update
     id = params[:id]
-    if Landlord.update(id, first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password]).valid?
-      Landlord.update(id, first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
-      updated_landlord = Landlord.find(id)
+    if Tenant.update(id, first_name: params[:first_name], last_name: params[:last_name]).valid?
+      Tenant.update(id, first_name: params[:first_name], last_name: params[:last_name])
+      updated_tenant = Tenant.find(id)
       # message can be altered for better UI experience in the future
-      render json: {landlord: updated_landlord, message: "Landlord successfully updated"}
+      render json: {tenant: updated_tenant, message: "Tenant successfully updated"}
     else
       # message can be altered for better UI experience in the future
       render json: {message: "Update failed"}
@@ -33,7 +33,7 @@ class TenantsController < ApplicationController
 
   def destroy
     id = params[:id]
-    Landlord.destroy(id)
+    Tenant.destroy(id)
     render json: {message: "Successfully deleted"}
   end
 end
