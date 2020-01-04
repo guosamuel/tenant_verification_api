@@ -50,6 +50,7 @@ class TenantsController < ApplicationController
   end
 
   def update
+    # this method does not need to be changed for the nested routes because for the nested route, the :id in params[:id] refers to the tenant id because its the last model in the nested route. Will need to change IF it is triple nested
     id = params[:id]
     if Tenant.update(id, first_name: params[:first_name], last_name: params[:last_name]).valid?
       Tenant.update(id, first_name: params[:first_name], last_name: params[:last_name])
@@ -63,6 +64,7 @@ class TenantsController < ApplicationController
   end
 
   def destroy
+    # this method does not need to be changed for the nested routes because for the nested route, the :id in params[:id] refers to the tenant id because its the last model in the nested route. Will need to change IF it is triple nested
     id = params[:id]
     Tenant.destroy(id)
     render json: {message: "Successfully deleted"}
