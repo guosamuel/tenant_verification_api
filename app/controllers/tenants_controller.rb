@@ -1,7 +1,12 @@
 class TenantsController < ApplicationController
   def index
-    tenants = Tenant.all
-    render json: tenants
+    if !params[:landlord_id]
+      tenants = Tenant.all
+      render json: tenants
+    else
+      tenants = Landlord.find(params[:landlord_id]).tenants
+      render json: tenants
+    end
   end
 
   def show
