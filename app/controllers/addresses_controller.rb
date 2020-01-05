@@ -39,7 +39,7 @@ class AddressesController < ApplicationController
     def destroy
         address = Address.find(params[:id])
         address.destroy 
-        render json: address
+        render json: {message: "Deleted successfully"}
     end
 
     private 
