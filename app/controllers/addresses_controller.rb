@@ -17,7 +17,7 @@ class AddressesController < ApplicationController
   
     def create
       # param keys may subject to change depending on the body of the post request
-      address = Address.create(address_params)
+      address = Address.new(address_params)
       if address.valid?
         # message can be altered for better UI experience in the future
         render json: {address: address, message: "Address successfully created"}
@@ -30,7 +30,7 @@ class AddressesController < ApplicationController
     def update
       address = Address.find(params[:id])
       if address.valid?
-        render json: {address: address, message: "Address successfully updated"}
+        render json: {address: address.update address_params, message: "Address successfully updated"}
       else
         render json: {message: "Update failed"}
       end
