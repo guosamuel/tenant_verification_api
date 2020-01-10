@@ -1,4 +1,5 @@
 class LandlordsController < ApplicationController
+
   def show
     id = params[:id]
     landlord = Landlord.find(id)
@@ -36,4 +37,5 @@ class LandlordsController < ApplicationController
     Landlord.destroy(id)
     render json: {message: "Successfully deleted"}
   end
+
 end
