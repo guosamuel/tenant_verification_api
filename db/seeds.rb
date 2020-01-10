@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 for x in 1..6
-    Landlord.find_or_create_by(first_name: "Sam#{x}", last_name: "Guo#{x}", email: "derp#{x}@gmail.com", password: '123#{x}')
-    Tenant.find_or_create_by(first_name: "Nancy#{x}", last_name: "Lin#{x}")
-    Review.find_or_create_by(start_date: Date.today, end_date: Date.today, landlord_id: x, tenant_id: x+4, address: "123#{x} Fake St", comment: "Testing#{x} right now")
+    Landlord.create(first_name: "Sam#{x}", last_name: "Guo#{x}", email: "derp#{x}@gmail.com", password: '123#{x}')
+    Tenant.create(first_name: "Nancy#{x}", last_name: "Lin#{x}")
+    Review.create(start_date: Date.today, end_date: Date.today, landlord_id: "#{x}", tenant_id: "#{x}", address: "123#{x} Fake St", comment: "Testing#{x} right now")
 end
