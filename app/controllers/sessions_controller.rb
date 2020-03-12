@@ -18,7 +18,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-
+    # not sure what to put here since the token would be destroyed
+    # on the front end
   end
 
   private
