@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def create
-    user = User.find_by(username: params[:email])
+    user = Landlord.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       user_id = user.id
       token = JWT.encode({user_id: user_id}, ENV['SECRET_TOKEN'])
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   def get_current_user
     token = request.headers['Authorization']
     user_id = decoded_token(token)[0]["user_id"]
-    User.find(user_id)
+    Landlord.find(user_id)
   end
 
   def destroy
